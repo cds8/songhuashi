@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="松花石翡翠,墨翠,无色玻璃种,Jadeite,珠宝">
     <meta name="description" content="">
@@ -179,7 +180,7 @@ $('.nextBtn01').on('click', function(e){
     mySwiper.swipeNext();
     var sliderIndex = $('.swiperWrapper24 .swiper-slide').length;
     var indexPage = mySwiper.activeIndex;
-    if(indexPage == (sliderIndex-1)){
+    if(indexPage == (sliderIndex-4)){
         $(this).hide();
     }
     $('.prevBtn01').show();    
@@ -193,8 +194,8 @@ $(function() {
         imageBtnPrev: 'images/imgbox/prevlabel.gif', // (string) 设置prev图片路径
         imageBtnNext: 'images/imgbox/nextlabel.gif', // (string) 设置next图片路径
         containerResizeSpeed: 350, // (integer) 图片loading时间及弹出窗口的动画效果所需时间（毫秒）
-        txtImage: '图片',  //(string) 指定文本的“形象” 。例：Image 2 of 5
-        txtOf: 'of' // (string) 指定文本。例：Image 2 of 5
+        txtImage: ' ',  //(string) 指定文本的“形象” 。例：Image 2 of 5
+        txtOf: '/' // (string) 指定文本。例：Image 2 of 5
     });
 });
 </script>
