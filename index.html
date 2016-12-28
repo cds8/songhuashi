@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="keywords" content="松花石,翡翠,墨翠,无色玻璃种,珠宝">
     <meta name="description" content="松花石，公司集翡翠原材料采购、设计、加工、镶嵌、零售、高级定制及品牌建设为一体，以对文化收藏及珍品鉴赏有共识的高知型藏家为服务对象的顶级品牌，倾听年轻人感受、追求个性创意的时尚品牌、注重品牌消费和品质生活的高端消费人群的全新品牌翠品屋。">
     <title>松花石</title>
@@ -19,16 +20,6 @@
 <body>
 <div class="scroll_body noselect">
     	<div class="top" id="top">
-        	<!-- <a id="langage" href="index_en.htm">EN</a> -->
-        	<!-- <img src="images/sound.gif" id="sound" tip="1" /> -->
-            <!--  <div id="bgsound" style="display:none">
-				<audio src="music/bgmusic.mp3" controls autoplay="false" loop></audio>
-				<audio src="music/bgmusic.mp3" preload="false" autoplay="false"></audio>
-				<audio id="audio-mp3" class="audio" preload="false" autoplay="true" loop>
-					<source src="music/bgmusic.mp3"></source>
-					<source src="music/bgmusic.ogg"></source>
-				</audio>
-			</div> -->
             <a href="index.html" style="line-height:0px;color:#000"><h1 class="logo">松花石</h1></a>
             <nav class="nav">
                 <div class="nav_btn" id="nav_btn">
@@ -48,7 +39,7 @@
                             <a href="con1_1.html">720全景</a>
                             <a href="con1_2.html">领导关怀</a>
                             <a href="con1_3.html">集团动态</a>
-                            <a href="con1_4.html">社会责任(原企业公告)</a>
+                            <a href="con1_4.html">社会责任</a>
                         </div>
                     </li>
                     <li>
@@ -101,6 +92,25 @@
                 <img src="images/top/top_bottom_01.png"/>
             </div>
         </div>
+        <div class="m-top pa">
+            <div class="m-top-img">
+                <a href="index.html"><img src="images/mobile/m_logo_01.png"/></a>
+            </div>
+            <span class="m-top-border">
+                <img src="images/mobile/top/top_border.png"/>
+            </span>
+            <div class="m-nav-list">
+                <ul class="clearfix">
+                    <li><a href="con1_1.html">新闻中心</a></li>
+                    <li><a href="#">历史文化</a></li>
+                    <li><a href="#">珍藏鉴赏</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <span  class="m-top-border">
+                <img src="images/mobile/top/top_border.png"/>
+            </span>
+        </div>
         <div class="content2-4">
             <div class="content-box pr">
                 <div class="swiper-container swiper-container24 swiperContainer00" style="padding-top:130px !important">
@@ -116,17 +126,32 @@
                         <img class="swiper-slide swiper-slide24 swiper-slide22" src="images/index_08.png">
                     </div>
                 </div>
-                <div class="swiper-button-prev pre-btn24 pn-btn pa prevBtn01 noselect" style="display:none">
+                <div class="swiper-button-prev pre-btn24 pn-btn pa prevBtn01 noselect" style="left:100px;z-index:9999">
                     <img src="images/left_btn2.png"/>
                 </div>
-                <div class="swiper-button-next next-btn24 pn-btn pa nextBtn01 noselect">
+                <div class="swiper-button-next next-btn24 pn-btn pa nextBtn01 noselect" style="right:100px;z-index:9999">
                     <img src="images/right_btn2.png"/>
+                </div>
+            </div>
+            <div class="m-content-box">
+                <div class="swiper-container swiperContainer01" style="">
+                    <div class="swiper-wrapper swiper-wrapper01">
+                        <!-- 第1屏 -->
+                        <div class="swiper-slide">
+                            <img class="m-swiper-slide" src="images/mobile/m_index_01.png">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="bottom noselect">
-        <div class="bottom_box2" style="line-height:30px;">Copyright 2016 by Forestry Financing Trust All Right Reserved. 吉ICP备16002997号</div>
-</div>
+            <div class="bottom_box2" style="line-height:30px;">
+                Copyright 2016 by Forestry Financing Trust All Right Reserved.吉ICP备16002997号;技术支持：吉林禾熙科技开发有限公司 电话：13578904400
+            </div>
+            <div class="bottom_box3" style="line-height:30px;">
+                Copyright 2016 @ 松花石
+            </div>
+        </div>
 </div>        
 <script type="text/javascript">
 // $(function(){
@@ -169,27 +194,31 @@
 // })
 //选项按钮
 var mySwiper = new Swiper('.swiperContainer00',{
-
+    autoplay:4000,
+    loop:true
 });
 $('.prevBtn01').on('click', function(e){
     e.preventDefault()
     mySwiper.swipePrev();
-    var indexPage = mySwiper.activeIndex;
-    if(!indexPage){
-        $(this).hide();
-    }
-    $('.nextBtn01').show();
+    // var indexPage = mySwiper.activeIndex;
+    // if(!indexPage){
+    //     $(this).hide();
+    // }
+    // $('.nextBtn01').show();
 })
 $('.nextBtn01').on('click', function(e){
     e.preventDefault()
     mySwiper.swipeNext();
-    var sliderIndex = $('.swiperWrapper24 .swiper-slide').length;
-    var indexPage = mySwiper.activeIndex;
-    if(indexPage == (sliderIndex-1)){
-        $(this).hide();
-    }
-    $('.prevBtn01').show();    
+    // var sliderIndex = $('.swiperWrapper24 .swiper-slide').length;
+    // var indexPage = mySwiper.activeIndex;
+    // if(indexPage == (sliderIndex-1)){
+    //     $(this).hide();
+    // }
+    // $('.prevBtn01').show();    
 })
+var mySwiper02 = new Swiper('.swiperContainer01',{
+
+});
 </script>
 </body>
 </html>

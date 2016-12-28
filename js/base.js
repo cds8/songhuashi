@@ -1,11 +1,18 @@
-﻿
-
-
+﻿(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;            
+      if (!clientWidth) return;
+      docEl.style.fontSize =100 * (clientWidth / 1242) + 'px';
+    };
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
 $(function () {
     initTop();
-
 });
-
 /*    
      *    选项卡样式二(箭头轮播图)
      *    oClass轮播图类;   oLeft左箭头类;
@@ -73,17 +80,17 @@ function initTop() {
 
         });
     });
-    $(window).resize(function () {
-        docWidth = $(document).width();
-        oNavSecond.css("width", (docWidth - 310) + "px");
-        if ($(window).width() <= 960) {
-            oTop.css("width", "960px");
-        }
-        else {
-            oTop.css("width", "100%");
-        }
-		$('.bottom').css({'top':$(window).height()-30+'px'});
-    });
+  //   $(window).resize(function () {
+  //       docWidth = $(document).width();
+  //       oNavSecond.css("width", (docWidth - 310) + "px");
+  //       if ($(window).width() <= 960) {
+  //           oTop.css("width", "960px");
+  //       }
+  //       else {
+  //           oTop.css("width", "100%");
+  //       }
+		// $('.bottom').css({'top':$(window).height()-30+'px'});
+  //   });
 }
 
 //页面大图切换
@@ -335,13 +342,13 @@ var browser={
 		
 		
 $(document).ready(function(e) {
-	 if(browser.versions.iPad){
-	 	$('.scroll_body').height($(window).height()-40);
-		$('.bottom').css({'top':$(window).height()-62+'px'});
-	 }else{
-		 $('.scroll_body').height($(window).height()-0);
-		 $('.bottom').css({'top':$(window).height()-30+'px'});
-	 }
+	 // if(browser.versions.iPad){
+	 // 	$('.scroll_body').height($(window).height()-40);
+		// $('.bottom').css({'top':$(window).height()-62+'px'});
+	 // }else{
+		//  $('.scroll_body').height($(window).height()-0);
+		//  $('.bottom').css({'top':$(window).height()-30+'px'});
+	 // }
 	
 	//$('.index_img_show').css({'top':($(window).height()-500)/2-25+'px'});
 	//$('.index_img_show').css({'top':10+'px'});
